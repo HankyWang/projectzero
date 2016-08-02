@@ -23,7 +23,7 @@ class wechatCallbackapiTest
     $token = 'weixin';
     $tmpArr = array($token, $timestamp, $nonce);
     sort($tmpArr);
-    $tmpStr = implode( $tmpArr );
+    $tmpStr = implode('', $tmpArr );
     $tmpStr = sha1( $tmpStr );
     if( $tmpStr == $signature ){
     return true;
