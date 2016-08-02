@@ -35,7 +35,7 @@ class wechatCallbackapiTest
   public function responseMsg()
   {
     $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
-    if (!emptyempty($postStr)){
+    if (!empty($postStr)){
     $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
     $fromUsername = $postObj->FromUserName;
     $toUsername = $postObj->ToUserName;
