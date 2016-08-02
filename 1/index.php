@@ -1,2 +1,2 @@
 <?php
-    echo 'mooc'
+    echo 'mooc';
