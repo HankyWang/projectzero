@@ -20,7 +20,7 @@ class wechatCallbackapiTest
     $signature = $_GET["signature"];
     $timestamp = $_GET["timestamp"];
     $nonce = $_GET["nonce"];
-    $token = 'doulife';
+    $token = 'weixin';
     $tmpArr = array($token, $timestamp, $nonce);
     sort($tmpArr);
     $tmpStr = implode( $tmpArr );
