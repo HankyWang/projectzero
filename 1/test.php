@@ -1,10 +1,4 @@
 <?php
-    echo __FILE__;
-    echo "<br />";
-    echo __LINE__;
-    echo "<br />";
-    echo PHP_VERSION;
-    echo "<br />";
-    echo PHP_OS;
-    echo "<br />";
+    $student = array('2','3','4','5');
+    echo student[1];
 ?>
