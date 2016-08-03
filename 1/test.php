@@ -1,6 +1,10 @@
 <?php
-    $var = 'PI';
-    define($var,3.14);
-    $var = 'PII';
-    echo $var;
+    echo __FILE__;
+    echo "<br />";
+    echo __LINE__;
+    echo "<br />";
+    echo PHP_VERSION;
+    echo "<br />";
+    echo PHP_OS;
+    echo "<br />";
 ?>
