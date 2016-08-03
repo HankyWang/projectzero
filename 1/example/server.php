@@ -59,7 +59,7 @@
      * @return void
      */
     protected function onLocation() {
-      $num = 1 / 0;
+      //$num = 1 / 0;
       // 故意触发错误，用于演示调试功能
 
       $this->responseText('收到了位置消息：' . $this->getRequest('location_x') . ',' . $this->getRequest('location_y'));
