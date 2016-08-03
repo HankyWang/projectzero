@@ -5,6 +5,7 @@ if (isset($_GET['echostr'])) {
 }else{
   $wechatObj->responseMsg();
 }
+echo 'JUST TRY OUT';
 class wechatCallbackapiTest
 {
   public function valid()
