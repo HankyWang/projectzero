@@ -4,7 +4,7 @@
         $wechatObj->valid();
     }
     else{
-        $wechatObj->valid();
+        $wechatObj->responseMsg();
     }
 
     class wechatCallbackapiTest
