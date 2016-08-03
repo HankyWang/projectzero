@@ -1,4 +1,5 @@
 <?php
+    echo "TRY OUT";
     $wechatObj = new wechatCallbackapiTest();
     if (isset($_GET['echostr'])) {
         $wechatObj->valid();
