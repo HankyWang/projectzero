@@ -2,7 +2,7 @@
 function getPhoneNumInfo($mobile)
 {
 	if ( $mobile == "" || strlen($mobile) != 11 ){
-		return "发送13位'手机号'，例如'13000000000'";
+		return "发送11位'手机号'，例如'13000000000'";
 	}
 
 	$url = "http://life.tenpay.com/cgi-bin/mobile/MobileQueryAttribution.cgi?chgmobile=".$mobile;
