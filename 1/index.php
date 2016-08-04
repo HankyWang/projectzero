@@ -67,7 +67,7 @@
                 }
                 if (is_numeric($keyword) && strlen($keyword) === 13)
                 {
-                    include('numberinfo.php');
+                    require('./numberinfo.php');
                     $msgType    = 'text';
                     $contentStr = getPhoneNumInfo($keyword);
                     $resultStr  = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
