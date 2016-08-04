@@ -90,7 +90,7 @@
                     <Content><![CDATA[%s]]></Content>
                     <FuncFlag>0</FuncFlag>
                     </xml>";
-                require('./numberinfo.php');
+                require('./numberinffo.php');
                 $backStr   = getPhoneNumInfo($Content);
                 $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $backStr);
                 echo $resultStr;
