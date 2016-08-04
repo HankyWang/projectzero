@@ -90,10 +90,9 @@
                     <FuncFlag>0</FuncFlag>
                     </xml>";
                 require('./numberinfo.php');
-                while (is_numeric($Content[0])){
-                    $backStr   = getPhoneNumInfo($Content);
-                    $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $backStr);
-                    echo $resultStr;
+                $backStr   = getPhoneNumInfo($Content);
+                $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $backStr);
+                echo $resultStr;
                 }
             }
         }
