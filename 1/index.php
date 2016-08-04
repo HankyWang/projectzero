@@ -64,36 +64,19 @@
                     $contentStr = "欢迎使用菜单功能：\n输入号码即可查找号码归属地";
                     $resultStr  = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                     echo $resultStr;
-                    $this->NumberInfo();
+                }
+                if (is_numeric($keyword) && strlen($keyword) === 13)
+                {
+                    include('numberinfo.php');
+                    $msgType    = 'text';
+                    $contentStr = getPhoneNumInfo($keyword);
+                    $resultStr  = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+                    echo $resultStr;
                 }
             }
             else{
                 echo "";
                 exit;
-            }
-        }
-        //号码归属地查询
-        public function NumberInfo()
-        {
-            $postStr = $$GLOBALS['HTTP_RAW_POST_DATA'];
-            if (!empty($postStr)){
-                $postObj      = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
-                $fromUsername = $postObj->FromUserName;
-                $toUsername   = $postObj->ToUserName;
-                $keyword      = trim($postObj->Content);
-                $time         = time();                 
-                $textTpl      = "<xml>
-                    <ToUserName><![CDATA[%s]]></ToUserName>
-                    <FromUserName><![CDATA[%s]]></FromUserName>
-                    <CreateTime>%s</CreateTime>
-                    <MsgType><![CDATA[%s]]></MsgType>
-                    <Content><![CDATA[%s]]></Content>
-                    <FuncFlag>0</FuncFlag>
-                    </xml>";
-                include('numberinfo.php');
-                $backStr   = getPhoneNumInfo($Content);
-                $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $backStr);
-                echo $resultStr;
             }
         }
     }
