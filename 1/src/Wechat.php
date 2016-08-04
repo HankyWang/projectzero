@@ -13,7 +13,7 @@
     /**
      * 调试模式，将错误通过文本消息回复显示
      *
-     * @var boolean
+     * @ var boolean
      */
     private $debug;
 
