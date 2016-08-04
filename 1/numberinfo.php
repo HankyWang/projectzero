@@ -1,7 +1,7 @@
 <?php
 function getPhoneNumInfo($mobile)
 {
-	if ( $mobile == "" || strlen($mobile) != 13 ){
+	if ( $mobile == "" || strlen($mobile) != 11 ){
 		return "发送13位'手机号'，例如'13000000000'";
 	}
 
