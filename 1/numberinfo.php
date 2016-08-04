@@ -1,13 +1,8 @@
 <?php
-/*-------------------------------------------------
-   |     weather.php [ 财付通手机归属地接口 ]
-------------------------------------------------*/
-
-
 function getPhoneNumInfo($mobile)
 {
-	if ($mobile == "" || (strstr($mobile, "+"))){
-		return "发送'手机号+归属'，例如'13000000000归属'";
+	if ( $mobile == "" || strlen($mobile) != 13 ){
+		return "发送13位'手机号'，例如'13000000000'";
 	}
 
 	$url = "http://life.tenpay.com/cgi-bin/mobile/MobileQueryAttribution.cgi?chgmobile=".$mobile;
