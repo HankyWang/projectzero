@@ -94,7 +94,6 @@
                 $backStr   = getPhoneNumInfo($Content);
                 $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $backStr);
                 echo $resultStr;
-                }
             }
         }
     }
