@@ -64,6 +64,7 @@
                     $contentStr = "欢迎使用菜单功能：\n输入号码即可查找号码归属地";
                     $resultStr  = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                     echo $resultStr;
+                    $this->NumberInfo();
                 }
             }
             else{
