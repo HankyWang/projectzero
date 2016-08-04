@@ -65,7 +65,7 @@
                     $resultStr  = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                     echo $resultStr;
                 }
-                if (is_numeric($keyword) && strlen($keyword) === 13)
+                if (is_numeric($keyword) && strlen($keyword) == 11)
                 {
                     require('./numberinfo.php');
                     $msgType    = 'text';
