@@ -1,4 +1,10 @@
 <?php
-    $student = array('2','3','4','5');
-    var_dump($student);
-?>  
+class book {
+    function getName() {
+        return 'bookname';
+    }
+}
+$func = 'getName';
+$book = new book();
+$book->$func();
+?>
