@@ -1,5 +1,7 @@
 <?php
   print('<pre>');
   print_r($_GET);
-  print('</pre>')
+  print('<br />');
+  print_r($_POST);
+  print('</pre>');
 ?>
