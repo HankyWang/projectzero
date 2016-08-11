@@ -18,7 +18,7 @@
      * @return void
      */
     protected function onSubscribe() {
-      $this->responseText('欢迎关注');
+      $this->responseText('谢谢关注ProjectZero公众号');
     }
 
     /**
