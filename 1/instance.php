@@ -20,5 +20,6 @@
       return self::$_object;
     }
   }
-  $object = Car::Instance();
+  $object1 = Car::Instance();
+  $object2 = Car::Instance();
 ?>
