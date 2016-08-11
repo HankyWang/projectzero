@@ -21,5 +21,7 @@
     }
   }
   $object1 = Car::Instance();
+  var_dump($object1);
   $object2 = Car::Instance();
+  var_dump($object2);
 ?>
