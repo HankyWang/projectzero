@@ -32,7 +32,7 @@ class Car
 
   public function __call($name, $arg)
   {
-    if (name == 'SpeedUp')
+    if ($name == 'SpeedUp')
     {
       if (isset($this->ary['speed']))
       {
