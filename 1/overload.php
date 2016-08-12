@@ -4,7 +4,7 @@
 */
 class Car
 {
-  private ary = array();
+  private $ary = array();
 
   public function __set($key, $val)
   {
