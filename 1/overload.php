@@ -49,5 +49,5 @@ $car->SpeedUp();
 echo $car->speed;
 echo "<br />";
 $truck = new Car();
-echo isset($truck->speed);
+var_dump(isset($truck->speed));
 ?>
