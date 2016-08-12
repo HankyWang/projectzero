@@ -11,7 +11,7 @@ class Car
     $this->ary[$key] = $val;
   }
 
-  public __get($key)
+  public function __get($key)
   {
     if (isset($this->ary[$key]))
     {
@@ -20,17 +20,17 @@ class Car
     return null;
   }
 
-  public __isset($key)
+  public function __isset($key)
   {
     return (isset($this->ary[$key]));
   }
 
-  public __unset($key)
+  public function __unset($key)
   {
     unset($this->ary[$key]);
   }
 
-  public __call($name, $arg)
+  public function __call($name, $arg)
   {
     if (name == 'SpeedUp')
     {
