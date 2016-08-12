@@ -22,7 +22,9 @@ class Car
 
   public function __isset($key)
   {
-    return (isset($this->ary[$key]));
+    if (isset($this->ary[$key]))
+      return true;
+    return false;
   }
 
   public function __unset($key)
