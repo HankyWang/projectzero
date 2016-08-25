@@ -10,5 +10,4 @@ $book->$func();
 echo $func;
 echo '</ br>';
 echo $book->$func;
-echo '<hr />';
 ?>
