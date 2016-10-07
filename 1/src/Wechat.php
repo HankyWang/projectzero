@@ -1,8 +1,9 @@
 <?php
 /**
- * 微信公众平台 PHP SDK
+ * 
  *
- * @author NetPuter <netputer@gmail.com>
+ * @author NetPuter <netputer@gmail.com> Hanky <hankvistawang@yahoo.com>
+ * 
  */
 
   /**
@@ -15,7 +16,7 @@
      *
      * @var boolean
      */
-    private $debug;
+    private $debug; 
 
     /**
      * 以数组的形式保存微信服务器每次发来的请求
@@ -121,7 +122,7 @@
 
     /**
      * 收到地理位置消息时触发，用于子类重写
-     *
+     * 
      * @return void
      */
     protected function onLocation() {}

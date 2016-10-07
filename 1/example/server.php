@@ -1,11 +1,12 @@
 <?php
 /**
- * 微信公众平台 PHP SDK 示例文件
  *
- * @author NetPuter <netputer@gmail.com>
+ * @author Hank Wang <hankvistawang@yahoo.com>
  */
 
   require('../src/Wechat.php');
+  require('../src/RegexTools.php');
+
 
   /**
    * 微信公众平台演示类
@@ -27,7 +28,7 @@
      * @return void
      */
     protected function onUnsubscribe() {
-      // 「悄悄的我走了，正如我悄悄的来；我挥一挥衣袖，不带走一片云彩。」
+      $this->responseText('谢谢关注'); 
     }
 
     /**
@@ -36,7 +37,44 @@
      * @return void
      */
     protected function onText() {
-      $this->responseText('收到了文字消息：' . $this->getRequest('content'));
+      $RegexCheck = new RegexTools(false,null);
+      $subject = $this->getRequest('content');
+
+      //不需要返回输入文本信息
+      
+      //需要返回输入文本信息
+      //
+      //Mobile Information
+      if ($RegexCheck->is_mobile($subject)) {
+        require_once('../api/mobile.php');
+        $resultStr = getMobile($subject);
+        $this->responseText($resultStr);
+      }
+
+      if ($RegexCheck->Keyword("时间", $subject) || $RegexCheck->Keyword("time", $subject)) {
+        $resultStr = '现在时间是: '.date("Y-m-d H:i:s",time());
+        $this->responseText($resultStr);
+      }
+
+      // if ($RegexCheck->Keyword(""))
+
+
+      //Url News Item
+      if ($RegexCheck->is_url($subject)) {
+        require_once('../api/url.php');
+        $urlinfo = new UrlInfo($subject);
+        $items = array( 
+          new NewsResponseItem( $urlinfo->getTitle(), $urlinfo->getTitle(), $urlinfo->getPic(), $urlinfo->getUrl() ) 
+        );
+        $this->responseNews($items);
+      }
+
+      //Email Contents
+      if ($RegexCheck->is_email($subject)) {
+        $this->responseText('接收到了E-mail地址信息：');
+      }
+
+      
     }
 
     /**
