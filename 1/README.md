@@ -159,9 +159,3 @@ $wechat = new MyWechat(
 
 $wechat->run();
 ```
-
-TODO
------
-1. 完善文档和注释；
-2. 完善异常处理；
-3. 提供 Composer 方式安装。
